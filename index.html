@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search bar with clear button</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c5c34da5d8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <h1 class="text-center m-5">Search bar with clear button</h1>
+
+    <form action="">
+       
+        <div class="searchBox-wrapper">
+        <div class="search-box">
+        <input class="form-control m-0 searchBox-input" type="text" placeholder="search">
+        <span class="fas fa-times-circle m-0 clear-btn"></span>
+       
+        </div>
+        <input type="submit" value="search">
+    </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $('document').ready(()=>{
+           $('.searchBox-input').keyup((e)=>{
+               if($('.searchBox-input').val() !=''){
+                $(".clear-btn").css("opacity","1")
+               }
+               else{
+                $(".clear-btn").css("opacity","0")
+               }
+             
+           })
+           //click the button
+           $('.clear-btn').on('click',()=>{
+               $('.searchBox-input').val('')
+               $('.clear-btn').css('opacity','0')
+           })
+        })
+    </script>
+</body>
+</html>

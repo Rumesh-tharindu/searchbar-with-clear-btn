@@ -1,0 +1,42 @@
+body{
+
+}
+
+h1{
+    text-transform: uppercase;
+}
+
+.searchBox-wrapper{
+    max-width:500px;
+    margin: 100px auto;
+    display: flex;
+}
+.search-box{
+    position: relative;
+    flex-grow: 1;
+}
+input[type="text"]{
+    border-radius: 0;
+}
+input[type="submit"]{
+    background-color: #fd9d3e;
+    border:0;
+    color:#000;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0 20px;
+}
+.clear-btn{
+    position: absolute;
+    right:10px;
+    top:10px;
+    color:#ccc;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    
+   
+  
+}
+.clear-btn:hover{
+  color:#555;
+}
